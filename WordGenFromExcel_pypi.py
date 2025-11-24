@@ -97,12 +97,18 @@ def main():
             # Загрузка шаблона
             doc = Document(template_path)
 
-            # Выполнение замен
+            # Подготовка словаря для замены
+            replacements = {}
             for col_idx in range(1, columns_count):
                 placeholder = headers[col_idx]
                 value = row_data[col_idx]
-                docx_replace(doc, placeholder=value)
+                replacements[placeholder] = value
                 print(f"Замена: {placeholder} → {value}")
+
+            # Выполнение замен
+            docx_replace(doc, **replacements)
+
+
 
             # Сохранение результата
             output_file = f"{doc_name}{Path(template_name).suffix}"
