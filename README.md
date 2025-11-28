@@ -34,3 +34,6 @@ data_file_name = ваш_файл_данных.xlsx
 Если появится какая-либо ошибка, нажмите Enter для её закрытия
 
 Если появятся какие-либо вопросы, пишите на адрес nikiforov1601@yandex.ru.
+
+Заметка:
+Что бы собрать exe файл, необходимо выполнить pyinstaller --onefile WordGenFromExcel_pypi.py
