@@ -105,7 +105,7 @@ def main():
             output_file = f"{doc_name}{Path(template_name).suffix}"
             output_path = os.path.join(exe_dir, output_file)
             doc.save(output_path)
-            print(f"Создан документ: {output_path}\n")
+            print(f"Создан документ: {output_path}")
 
     except Exception as e:
         print(f"КРИТИЧЕСКАЯ ОШИБКА: {str(e)}", file=sys.stderr)
@@ -114,4 +114,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    # print(excel_to_dict("Данные_для_заполнения.xlsx"))
